@@ -32,7 +32,7 @@ const Home = () => {
         setPunchlineShowing(!punchlineShowing);
     }
 
-    const sendVote = (joke_id: number, type: string) => axios.post('http://127.0.0.1:3000/api/joke/vote', {joke_id, type}).then(response => setCurrentJoke(response.data));
+    const sendVote = (joke_id: number, type: string) => axios.post('https://rjapi.daboy.me/api/joke/vote', {joke_id, type}).then(response => setCurrentJoke(response.data));
 
     const sendLike = () => {
         toast('You liked this joke!', {position: 'bottom-center'});
